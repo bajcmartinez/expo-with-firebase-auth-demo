@@ -25,12 +25,6 @@ const SignUpScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
 
     try {
       await createUserWithEmailAndPassword(auth, value.email, value.password);
-      // Reset the form
-      setValue({
-        email: '',
-        password: '',
-        error: ''
-      });
       navigation.navigate('Sign In');
     } catch (error) {
       setValue({

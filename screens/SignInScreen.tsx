@@ -24,12 +24,6 @@ const SignInScreen = () => {
 
     try {
       await signInWithEmailAndPassword(auth, value.email, value.password);
-      // Reset the form
-      setValue({
-        email: '',
-        password: '',
-        error: ''
-      });
     } catch (error) {
       setValue({
         ...value,
